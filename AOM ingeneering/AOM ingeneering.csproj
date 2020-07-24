@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3E9EC1EB-90D5-4980-8432-04BC4EDE370F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AOM_ingeneering</RootNamespace>
+    <AssemblyName>AOM ingeneering</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942" />
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604" />
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClsPrint.cs" />
+    <Compile Include="DataGridError.cs" />
+    <Compile Include="movedbDataSet.cs">
+      <DependentUpon>movedbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="movedbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>movedbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PlanInstrCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanInstrCRUD.Designer.cs">
+      <DependentUpon>PlanInstrCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SotrudCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SotrudCRUD.Designer.cs">
+      <DependentUpon>SotrudCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="_10ProgrammInstruc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_10ProgrammInstruc.Designer.cs">
+      <DependentUpon>_10ProgrammInstruc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_11Podrasdelen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_11Podrasdelen.Designer.cs">
+      <DependentUpon>_11Podrasdelen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_12ProgrammSanat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_12ProgrammSanat.Designer.cs">
+      <DependentUpon>_12ProgrammSanat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_1PlanSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_1PlanSan.Designer.cs">
+      <DependentUpon>_1PlanSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_2NormDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_2NormDoc.Designer.cs">
+      <DependentUpon>_2NormDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_2NormDocReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_2NormDocReport.Designer.cs">
+      <DependentUpon>_2NormDocReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_3PlanInstr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_3PlanInstr.Designer.cs">
+      <DependentUpon>_3PlanInstr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_3PlanInstrReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_3PlanInstrReport.Designer.cs">
+      <DependentUpon>_3PlanInstrReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_4Sotrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_4Sotrud.Designer.cs">
+      <DependentUpon>_4Sotrud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_5VidachaSr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_5VidachaSr.Designer.cs">
+      <DependentUpon>_5VidachaSr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_5VidachaSrReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_5VidachaSrReport.Designer.cs">
+      <DependentUpon>_5VidachaSrReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_6Otwetstwen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_6Otwetstwen.Designer.cs">
+      <DependentUpon>_6Otwetstwen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_7Inzident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_7Inzident.Designer.cs">
+      <DependentUpon>_7Inzident.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_7inzidentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_7inzidentReport.Designer.cs">
+      <DependentUpon>_7inzidentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_8SIZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_8SIZ.Designer.cs">
+      <DependentUpon>_8SIZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_9GrafikMeropr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_9GrafikMeropr.Designer.cs">
+      <DependentUpon>_9GrafikMeropr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrafikMeroprCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrafikMeroprCRUD.Designer.cs">
+      <DependentUpon>GrafikMeroprCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupCRUD.Designer.cs">
+      <DependentUpon>GroupCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InzidentCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InzidentCRUD.Designer.cs">
+      <DependentUpon>InzidentCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NormDocCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NormDocCRUD.Designer.cs">
+      <DependentUpon>NormDocCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanSanCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanSanCRUD.Designer.cs">
+      <DependentUpon>PlanSanCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SostavGroupCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SostavGroupCRUD.Designer.cs">
+      <DependentUpon>SostavGroupCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VidachaSrCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VidachaSrCRUD.Designer.cs">
+      <DependentUpon>VidachaSrCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_9GrafikMeroprReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_9GrafikMeroprReport.Designer.cs">
+      <DependentUpon>_9GrafikMeroprReport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="NormDoc.rdlc" />
+    <EmbeddedResource Include="PlanInstrCRUD.resx">
+      <DependentUpon>PlanInstrCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SotrudCRUD.resx">
+      <DependentUpon>SotrudCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_10ProgrammInstruc.resx">
+      <DependentUpon>_10ProgrammInstruc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_11Podrasdelen.resx">
+      <DependentUpon>_11Podrasdelen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_12ProgrammSanat.resx">
+      <DependentUpon>_12ProgrammSanat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_1PlanSan.resx">
+      <DependentUpon>_1PlanSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_2NormDoc.resx">
+      <DependentUpon>_2NormDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_2NormDocReport.resx">
+      <DependentUpon>_2NormDocReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_3PlanInstr.resx">
+      <DependentUpon>_3PlanInstr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_3PlanInstrReport.rdlc" />
+    <EmbeddedResource Include="_3PlanInstrReport.resx">
+      <DependentUpon>_3PlanInstrReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_4Sotrud.resx">
+      <DependentUpon>_4Sotrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_5VidachaSr.resx">
+      <DependentUpon>_5VidachaSr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_5VidachaSrReport.rdlc" />
+    <EmbeddedResource Include="_5VidachaSrReport.resx">
+      <DependentUpon>_5VidachaSrReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_6Otwetstwen.resx">
+      <DependentUpon>_6Otwetstwen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_7Inzident.resx">
+      <DependentUpon>_7Inzident.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_7inzidentReport.rdlc" />
+    <EmbeddedResource Include="_7inzidentReport.resx">
+      <DependentUpon>_7inzidentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_8SIZ.resx">
+      <DependentUpon>_8SIZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_9GrafikMeropr.rdlc" />
+    <EmbeddedResource Include="_9GrafikMeropr.resx">
+      <DependentUpon>_9GrafikMeropr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrafikMeroprCRUD.resx">
+      <DependentUpon>GrafikMeroprCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupCRUD.resx">
+      <DependentUpon>GroupCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InzidentCRUD.resx">
+      <DependentUpon>InzidentCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NormDocCRUD.resx">
+      <DependentUpon>NormDocCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanSanCRUD.resx">
+      <DependentUpon>PlanSanCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SostavGroupCRUD.resx">
+      <DependentUpon>SostavGroupCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="VidachaSrCRUD.resx">
+      <DependentUpon>VidachaSrCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_9GrafikMeroprReport.resx">
+      <DependentUpon>_9GrafikMeroprReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="movedbDataSet.xsc">
+      <DependentUpon>movedbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="movedbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>movedbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="movedbDataSet.xss">
+      <DependentUpon>movedbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
